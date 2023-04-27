@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-
+import Windows11 from './assets/windows/Windows.jsx'
 
 function App() {
-  const [platform, setPlatform] = useState('pc')
+  const [platform, setPlatform] = useState('windows')
 
   const updatePlatform = e => setPlatform(e.target.dataset.platform)
 
@@ -17,9 +17,10 @@ function App() {
           <button data-active={platform === 'ios'} onClick={updatePlatform} data-platform="ios">iOS</button>
           <button data-active={platform === 'android'} onClick={updatePlatform} data-platform="android">ANDROID</button>
         </div>
-        <div className='tutorial-screen'>
+        {/* <div className='tutorial-screen'> */}
           {/* {platform === 'windows' && <WindowsTutorial/>} */}
-        </div>
+        {/* </div> */}
+        <Windows11/>
       </div>
     </div>
 
