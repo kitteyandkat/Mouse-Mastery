@@ -23,7 +23,7 @@ Whether someone is a complete beginner or an experienced user looking to brush u
         <h6>Sarah Johnson</h6>
       </div>
       <a href="https://github.com/kitteyandkat" alt="Sarah's Github">
-        <img src="./public/github-mark.svg" alt="Github Invertocat" style="width: 75px; height: 75px; margin-bottom: 15px;"/>
+        <img src="./public/images/github.png" alt="Github Invertocat" style="width: 75px; height: 75px; margin-bottom: 15px;"/>
       </a>
     </td>
     <td style="border: 2px black solid; width: 25%; height: 100%; text-align:center;" align="center">
@@ -32,7 +32,7 @@ Whether someone is a complete beginner or an experienced user looking to brush u
         <h6>Marie Epps</h6>
       </div>
       <a href="https://github.com/nebulamarie" alt="Marie's Github" >
-        <img src="./public/github-mark.svg" alt="Github Invertocat" style="width: 75px; height: 75px; margin-bottom: 15px;"/>
+        <img src="./public/images/github.png" alt="Github Invertocat" style="width: 75px; height: 75px; margin-bottom: 15px;"/>
       </a>
     </td>
     <td style="border: 2px black solid; width: 25%; height: 100%; text-align:center;" align="center">
@@ -41,7 +41,7 @@ Whether someone is a complete beginner or an experienced user looking to brush u
         <h6>Shawn Bailey</h6>
       </div>
       <a href="https://github.com/shawnmbailey" alt="Shawn's Github">
-        <img src="./public/github-mark.svg" alt="Github Invertocat" style="width: 75px; height: 75px; margin-bottom: 15px;"/>
+        <img src="./public/images/github.png" alt="Github Invertocat" style="width: 75px; height: 75px; margin-bottom: 15px;"/>
       </a>
     </td>
     <td style="border: 2px black solid; width: 25%; height: 100%; text-align:center;" align="center">
@@ -50,7 +50,7 @@ Whether someone is a complete beginner or an experienced user looking to brush u
         <h6>Connor Hennessey</h6>
       </div>
       <a href="https://github.com/Hennc94" alt="Connor's Github" >
-        <img src="./public/github-mark.svg" alt="Github Invertocat" style="width: 75px; height: 75px; margin-bottom: 15px;"/>
+        <img src="./public/images/github.png" alt="Github Invertocat" style="width: 75px; height: 75px; margin-bottom: 15px;"/>
       </a>
     </td>
   </tr>
