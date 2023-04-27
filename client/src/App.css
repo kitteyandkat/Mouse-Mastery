@@ -1,42 +1,43 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --highlight-color: rgb(183, 163, 34);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#root{
+  width: 100vw;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  place-items: flex-start !important;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.main-container {
+  display: flex;
+  justify-content: center;
 }
 
-.card {
-  padding: 2em;
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+
 }
 
-.read-the-docs {
-  color: #888;
+.tutorial-container {
+  justify-content: center;
+  align-items: center;
+  width: 1080px;
+  margin-top: 5%;
+}
+
+.tutorial-screen {
+  margin-top: 1em;
+  height: 720px;
+  background-color: gray;
+
+}
+
+
+button[data-active=true] {
+  background-color: var(--highlight-color);
 }
