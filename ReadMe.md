@@ -1,4 +1,4 @@
-# Not Netflix
+# Mouse Mastery
 
 ### SEV9 Capstone Project
 
@@ -58,7 +58,7 @@ Whether someone is a complete beginner or an experienced user looking to brush u
 
 ## WireFrames
 
-![Wireframe](./public/MouseMastery.png)
+![Wireframe](./public/images/MouseMastery.png)
 
 
 ## Libraries Used
