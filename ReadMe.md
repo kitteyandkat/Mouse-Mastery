@@ -56,19 +56,11 @@ Whether someone is a complete beginner or an experienced user looking to brush u
   </tr>
 </table>
 
-## Project Links
-
-- [Not Netflix](https://sev9-not-netflix.vercel.app/)
-
 ## WireFrames
 
-![Wireframe](./public/wireframe.png)
+![Wireframe](./public/MouseMastery.png)
 
-## Project Screenshots
-![Screenshot](./public/screenshot.png)
 
 ## Libraries Used
 - React
-- react-player
-- react-hover-video-player
-- react-responsive-modal
+- react-router-dom
