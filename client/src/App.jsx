@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Windows11 from './assets/windows/Windows.jsx'
+// import Windows11 from './assets/windows/Windows.jsx'
+// import PixelClone from './assets/Android/Pixel'
 
 function App() {
   const [platform, setPlatform] = useState('windows')
@@ -20,7 +21,9 @@ function App() {
         {/* <div className='tutorial-screen'> */}
           {/* {platform === 'windows' && <WindowsTutorial/>} */}
         {/* </div> */}
-        <Windows11/>
+        {/* <Windows11/> */}
+        {/* <PixelClone/> */}
+        <img src='/img/android/tree-spirits.jpg'></img>
       </div>
     </div>
 
