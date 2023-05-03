@@ -56,11 +56,15 @@ Whether someone is a complete beginner or an experienced user looking to brush u
   </tr>
 </table>
 
-## WireFrames
+## [WireFrames](https://www.figma.com/file/EqthVmcWpkg0L3py62joz0/MouseMastery?node-id=0%3A1&t=ZQhpPwER52dSySp4-1)
 
-![Wireframe](./public/images/MouseMastery.png)
+![Wireframe](./public/images/wireframe.png)
 
 
 ## Libraries Used
 - React
 - react-router-dom
+
+## Tutorials Used
+- [Coder48White](https://www.coder48white.in): [WinClone 11](https://www.youtube.com/watch?v=c9MTd4HZuP0)
+- [CodersBite](https://www.youtube.com/@codersbite3313): [BigSur UI Clone](https://www.youtube.com/watch?v=ETzws93N-YQ) 
