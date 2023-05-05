@@ -1,5 +1,5 @@
 import React from "react";
-import '../Windows/style.css'
+import '../Windows/windows.css'
 import WordIcon from "./Images/word-icon.png";
 import PhotosIcon from "./Images/phottos.png";
 import PowerPointIcon from "./Images/powerpoint-icon.png";
