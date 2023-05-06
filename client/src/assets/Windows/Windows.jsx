@@ -1,25 +1,25 @@
 import React from "react";
 import '../Windows/windows.css'
-import WordIcon from "./Images/word-icon.png";
-import PhotosIcon from "./Images/phottos.png";
-import PowerPointIcon from "./Images/powerpoint-icon.png";
-import ExcelIcon from "./Images/excel-icon.png";
-import MSOfficeIcon from "./Images/ms-office.png";
-import VSCodeIcon from "./Images/vs-code.png";
-import VSNormalIcon from "./Images/vs-normal.png";
-import MSSkypeIcon from "./Images/ms-skype.png";
-import OutlookIcon from "./Images/outlook-icon.png";
-import MSVideoIcon from "./Images/ms-video-icon.png";
-import SettingsIcon from "./Images/Settings.png";
-import WhiteboardIcon from "./Images/Whiteboard.png";
-import Paint2DIcon from "./Images/Paint-2D.png";
-import Paint3DIcon from "./Images/Paint-3D.png";
-import PhotosFolderIcon from "./Images/Photos-folder.png";
-import WindowsLogo from "./Images/Logo windows 11.png";
-import SearchIcon from "./Images/Search.png";
-import EdgeIcon from "./Images/edge-icon.png";
-import MSFileExplorerIcon from "./Images/ms-file-explorer.png";
-import PowerButton from "./Images/power-btn.png"
+import WordIcon from "/img/windows/word-icon.png";
+import PhotosIcon from "/img/windows/phottos.png";
+import PowerPointIcon from "/img/windows/powerpoint-icon.png";
+import ExcelIcon from "/img/windows/excel-icon.png";
+import MSOfficeIcon from "/img/windows/ms-office.png";
+import VSCodeIcon from "/img/windows/vs-code.png";
+import VSNormalIcon from "/img/windows/vs-normal.png";
+import MSSkypeIcon from "/img/windows/ms-skype.png";
+import OutlookIcon from "/img/windows/outlook-icon.png";
+import MSVideoIcon from "/img/windows/ms-video-icon.png";
+import SettingsIcon from "/img/windows/Settings.png";
+import WhiteboardIcon from "/img/windows/Whiteboard.png";
+import Paint2DIcon from "/img/windows/Paint-2D.png";
+import Paint3DIcon from "/img/windows/Paint-3D.png";
+import PhotosFolderIcon from "/img/windows/Photos-folder.png";
+import WindowsLogo from "/img/windows/Logo windows 11.png";
+import SearchIcon from "/img/windows/Search.png";
+import EdgeIcon from "/img/windows/edge-icon.png";
+import MSFileExplorerIcon from "/img/windows/ms-file-explorer.png";
+import PowerButton from "/img/windows/power-btn.png"
 
 
 function Windows11Clone() {
