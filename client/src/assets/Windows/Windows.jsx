@@ -24,7 +24,7 @@ import PowerButton from "./Images/power-btn.png"
 
 function Windows11Clone() {
   return (
-    <div>
+    <div className="windows-container">
       <div className="content-box" id="control">
         <input type="search" placeholder="Type here to Search" />
         <div className="pinned">

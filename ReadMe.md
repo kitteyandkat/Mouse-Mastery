@@ -70,4 +70,4 @@ Whether someone is a complete beginner or an experienced user looking to brush u
 - [Coder48White](https://www.coder48white.in): [WinClone 11](https://www.youtube.com/watch?v=c9MTd4HZuP0)
 - [CodersBite](https://www.youtube.com/@codersbite3313): [BigSur UI Clone](https://www.youtube.com/watch?v=ETzws93N-YQ) 
 
-- [Saiful Alaman](https://www.sololearn.com/profile/11717414): [Android UI Clone](https://www.sololearn.com/compiler-playground/WNt5BsPb99T9)
+- [Saiful Alam](https://www.sololearn.com/profile/11717414): [Android UI Clone](https://www.sololearn.com/compiler-playground/WNt5BsPb99T9)
