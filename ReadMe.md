@@ -12,6 +12,14 @@ Each tutorial in Mouse Mastery is broken down into small, manageable sections th
 
 Whether someone is a complete beginner or an experienced user looking to brush up on their skills, Mouse Mastery has something to offer. Our app is designed to be user-friendly and accessible to everyone, regardless of their level of tech expertise. With Mouse Mastery, anyone can learn to use their device with confidence and ease.
 
+## MVP
+* List of tutorials by device
+* Step by step instructions with screenshots
+* Search by device or keyword
+* user authentication
+* Bookmark progress for later reference
+* User "likes" or feedback
+
 
 ## Team Members
 

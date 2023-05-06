@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './WindowsTutorial.css';
 
 
@@ -6,11 +6,15 @@ function WindowsTutorial() {
     const [startMenuAnswer, setStartMenuAnswer] = React.useState("");
     const [taskbarAnswer, setTaskbarAnswer] = React.useState("");
     const [desktopAnswer, setDesktopAnswer] = React.useState("");
+
     return (
-      <div className="container">
+      <div className="Module1">
+        <div id="intro">
+            <h2>Windows</h2>
+        </div>
         <div id="start-menu">
           <h2>Start Menu</h2>
-          <p>The Start Menu is where you can access all of your apps</p>
+          <p>The Start Menu is where you can access all of your apps.</p>
           <img src="https://www.karlstechnology.com/blog/wp-content/uploads/2021/02/Windows-10-redesigned-Start-Menu-Sun-Valley-mockup-Windows-Central-2.jpg" alt="Start Menu"></img>
         </div>
   
@@ -22,7 +26,7 @@ function WindowsTutorial() {
   
         <div id="desktop">
           <h2>Desktop</h2>
-          <p>The Desktop is the body of your screen. You can place shortcuts to your favorite apps and files for easy access</p>
+          <p>The Desktop is the body of your screen. You can place shortcuts to your favorite apps and files for easy access.</p>
           <img src="https://cdn.windowsreport.com/wp-content/uploads/2023/01/Untitled-design-2023-01-08T184815.647-1200x900.jpg" alt="Desktop"></img>
         </div>
 
