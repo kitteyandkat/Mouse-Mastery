@@ -19,7 +19,7 @@
 }
 
 .left_corner_buttons {
-  margin-bottom: 20px;
+  /* margin-bottom: .01em; */
   cursor: pointer;
 }
 
@@ -33,7 +33,7 @@
 .menu_title {
   font-size: 12px;
   color: #797979;
-  margin: 15px 0;
+  margin: .8em 0;
   letter-spacing: 0.6px;
 }
 

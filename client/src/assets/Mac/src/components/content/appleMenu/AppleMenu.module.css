@@ -1,4 +1,5 @@
 .wrapper {
+  position: absolute;
   padding: 10px;
   width: 260px;
   height: 289.15px;
@@ -6,8 +7,9 @@
   background-blend-mode: luminosity;
   backdrop-filter: blur(81.5485px);
   border-radius: 6px;
-  left: 10px;
-  top: -10px;
+  left: .2em;
+  top: -2.3em
+  
 }
 
 .ul {
