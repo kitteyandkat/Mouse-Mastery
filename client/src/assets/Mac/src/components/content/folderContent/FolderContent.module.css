@@ -11,7 +11,7 @@
   background: rgba(245, 245, 245, 0.5);
   background-blend-mode: luminosity;
   backdrop-filter: blur(81.5485px);
-  height: 100%;
+  height: 55.04vh;
   width: 200px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -44,7 +44,7 @@
 .left_li {
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 
 .blue_icon_img {
@@ -54,17 +54,18 @@
 }
 
 .left_li_text {
-  font-size: 13px;
+  font-size: .8em;
   color: #232526;
   font-weight: bold;
 }
 
 .right_inner_wrapper {
   background-color: #ffffff;
-  height: 100%;
+  height: 59.3vh;
   width: calc(900px - 200px);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  color: black;
 }
 
 .right_top_bar {
