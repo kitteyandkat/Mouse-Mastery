@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import './WindowsTutorial.css';
+import Modal from "./Modal";
+import Quiz from "./Quiz";
 
 
 function WindowsTutorial() {
-    const [startMenuAnswer, setStartMenuAnswer] = React.useState("");
-    const [taskbarAnswer, setTaskbarAnswer] = React.useState("");
-    const [desktopAnswer, setDesktopAnswer] = React.useState("");
+    const [selectedAnswer, setSelectedAnswer]=React.useState("");
 
+    function handleCheckAnswer() {
+      let result = "";
+      if(selectedAnswer === correctAnswer){
+        result = checkAnswer(selectedAnswer === correctAnswer);
+      }
+  }
+    
     return (
-      <div className="Module1">
-        <div id="intro">
-            <h2>Windows</h2>
-        </div>
+      <div className="container">
         <div id="start-menu">
           <h2>Start Menu</h2>
-          <p>The Start Menu is where you can access all of your apps.</p>
+          <p>The Start Menu is where you can access all of your apps</p>
           <img src="https://www.karlstechnology.com/blog/wp-content/uploads/2021/02/Windows-10-redesigned-Start-Menu-Sun-Valley-mockup-Windows-Central-2.jpg" alt="Start Menu"></img>
         </div>
   
@@ -26,26 +30,15 @@ function WindowsTutorial() {
   
         <div id="desktop">
           <h2>Desktop</h2>
-          <p>The Desktop is the body of your screen. You can place shortcuts to your favorite apps and files for easy access.</p>
+          <p>The Desktop is the body of your screen. You can place shortcuts to your favorite apps and files for easy access</p>
           <img src="https://cdn.windowsreport.com/wp-content/uploads/2023/01/Untitled-design-2023-01-08T184815.647-1200x900.jpg" alt="Desktop"></img>
         </div>
 
-        <div id="Mastery">
-          <h2>Mastery</h2>
-          <p>Let's see what you've learned!</p>
-          <br></br>
-          <p>What is this?</p>
-          <img src="https://www.karlstechnology.com/blog/wp-content/uploads/2021/02/Windows-10-redesigned-Start-Menu-Sun-Valley-mockup-Windows-Central-2.jpg" alt="Start Menu"></img>
-          <input type="text" name="answer"></input> 
-          <p>What is this?</p>
-          <img src="https://i.stack.imgur.com/nrHmO.png" alt="Taskbar"></img>
-          <input type="text" name="answer"></input> 
-          <p>What is this?</p>
-          <img src="https://cdn.windowsreport.com/wp-content/uploads/2023/01/Untitled-design-2023-01-08T184815.647-1200x900.jpg" alt="Desktop"></img>
-        <input type="text" name="answer"></input> 
-        </div>
-      </div>
-    )
+      
+          </div>   
+   )       
   }
   
-  export default WindowsTutorial;
+
+  
+   export default WindowsTutorial;
