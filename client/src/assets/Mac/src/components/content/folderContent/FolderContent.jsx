@@ -212,7 +212,7 @@ const FolderContent = ({ isFolderOpen, closeFolderContent }) => {
               </div>
             </div>
             <div className={styles.row}>
-              <div className={styles.folderWrapper}>
+              <div className={styles.folderWrapper} data-lion-png>
                 <img
                   className={styles.file}
                   src="/img/mac/image_file.png"
