@@ -1,12 +1,10 @@
-import React, from "react";
-import App from "../App";
-
-
-
+import Modal from "./Modal";
 
 function Quiz(props) {
   const [selectedAnswer, setSelectedAnswer] = React.useState("");
   const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState("");
   const questions = props.questions;
 
   function handleNextQuestion() {
@@ -37,6 +35,8 @@ function Quiz(props) {
         ))}
       </ul>
       <button onClick={handleNextQuestion}>Next</button>
+      {showModal && <Modal content={modalContent} onClose={() => setShowModal(false)} />}
+
     </div>
   );
 }
@@ -56,3 +56,4 @@ The component uses the currentQuestionIndex prop to access the current question 
 and renders the question text and a set of radio button inputs for each answer choice.
 When the user clicks the "Next" button, the handleNextQuestion function is called, 
 which in turn calls the onNextQuestion function passed in as a prop.
+*/

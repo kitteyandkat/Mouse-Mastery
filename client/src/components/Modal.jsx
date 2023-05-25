@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import Modal from "./Modal";
 
-function Quiz(props) {
+
+function Modal (props) {
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState("");
@@ -33,9 +32,8 @@ function Quiz(props) {
         </div>
       ))}
       <button onClick={handleCheckAnswer}>Next</button>
-      {showModal && <Modal content={modalContent} onClose={() => setShowModal(false)} />}
     </div>
   );
 }
 
-export default Modal;
+export default Modal

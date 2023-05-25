@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import Windows11 from './assets/windows/Windows.jsx'
 import WindowsTutorial from './components/WindowsTutorial'
+import Quiz from './components/Quiz'
+import Modal from './components/Modal'
+import Steps from './components/Steps'
 
 function App() {
   const [platform, setPlatform] = useState('windows')
@@ -24,7 +27,7 @@ function App() {
 
        {/* </div>  */}
         <Windows11/>
-  
+        <Steps/>
 
     
       </div>

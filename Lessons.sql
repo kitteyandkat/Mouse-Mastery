@@ -328,6 +328,75 @@ COPY public.steps (lesson_id, step_order, widget_type, x_coord, y_coord, step_te
 5	3	hint	0	0	You will see a new folder icon appear. Give your folder a name.	windows
 5	4	hint	0	0	You have successfully created a new folder on your computer.	windows
 5	5	hint	0	0	In this exercise we learned In Windows, folders are used to organize files, just like physical folders. To create a new folder, right-click on your desktop, choose "New," then select "Folder." Give the folder a name and you have successfully organized your files by creating a new folder on your computer.	windows
+1	1	hint	0	0	A very useful shortcut to learn is Cut, Copy, Paste. To "cut" means you are moving an item from one place to another. It's like picking up the item and placing it in a different location. To "copy" means you are making a duplicate of it. It's like creating a photocopy, so you have the original in its original location and a duplicate in another location. "Paste" is used to place the item you cut or copied into a new location. It's like pasting the item onto a new surface.	windows
+1	1	hint	0	0	Go to your "Desktop". Right-click on the folder you created when you were learning about folders and choose "Cut".	windows
+1	2	hint	0	0	Click the "Start Menu" and double click on "Documents".	windows
+1	3	hint	0	0	While on the "Documents" menu, Right-click and select "Paste". The folder should now be moved from the desktop to the "My Documents" folder.	windows
+3	1	hint	0	0	Welcome to Wi-Fi and internet. Wi-Fi is a way to connect your computer or device to the internet without any cables. It's a wireless way that lets you browse the internet and do other things online.	windows
+3	1	hint	0	0	To connect to Wi-Fi, you first need to make sure your device has Wi-Fi turned on. Click on the Wi-Fi icon on the bottom right corner of your taskbar.	windows
+3	2	hint	0	0	Click on the network you want to connect to and enter the password if necessary. This will depend on your internet provider.	windows
+3	3	hint	0	0	Once you're connected, you should see a signal strength icon on your screen. Hover your cursor over the signal icon. This will confirm the network you are on and connection strength. You are now ready to go on the internet.	windows
+3	4	hint	0	0	Click on the internet browser for your device. This may be Google Chrome, Microsoft Edge, or your internet provider's icon. You are now on the internet.	windows
+3	1	hint	0	0	Your home page is the first page you see when you open your web browser. It's like your own personal starting point for the internet. You can customize your home page to show your favorite websites, news feeds, and other useful information.	windows
+3	1	hint	0	0	Look for the three dots or lines in the top-right corner.	windows
+1	1	hint	0	0	A very useful shortcut to learn is Cut, Copy, Paste...	windows
+1	1	hint	0	0	Go to your "Desktop". Right-click on the folder...	windows
+1	2	hint	0	0	Click the "Start Menu" and double click on "Documents".	windows
+1	3	hint	0	0	While on the "Documents" menu, Right-click and select "Paste".	windows
+3	1	hint	0	0	Welcome to Wi-Fi and internet. Wi-Fi is a way to connect...	windows
+3	1	hint	0	0	To connect to Wi-Fi, you first need to make sure your device...	windows
+3	2	hint	0	0	Click on the network you want to connect to and enter the password...	windows
+3	3	hint	0	0	Once you're connected, you should see a signal strength icon...	windows
+3	4	hint	0	0	Click on the internet browser for your device...	windows
+3	1	hint	0	0	Your home page is the first page you see when you open your web browser...	windows
+3	1	hint	0	0	Look for the three dots or lines in the top-right corner.	windows
+3	2	hint	0	0	Click on "Settings" and select "Default Browser". This may also be listed under "Home Page" or "Startup Page".	windows
+3	3	hint	0	0	Enter the web address of your favorite website or type in a search engine like Google. Save the changes and close the settings. You have now changed your default home page.	windows
+4	1	hint	0	0	Email is a way to send a letter, but instead of using paper and envelopes, you use your computer or phone. The recipient will receive your message in their email inbox, and they can read and reply to it just like a regular letter.	windows
+4	1	hint	0	0	Open your email application or website. Examples include Microsoft Outlook, Gmail, or Yahoo Mail.	windows
+4	2	hint	0	0	Click on "Compose" or the button that allows you to create a new email.	windows
+4	3	hint	0	0	Enter the recipient email address in the "To" field.	windows
+4	4	hint	0	0	Write your message in the large text box provided. You can use the formatting options to change the font, add attachments, or include links.	windows
+4	5	hint	0	0	Click "Send" to send your email. The recipient will receive it in their inbox.	windows
+4	1	hint	0	0	To send an email with an attachment, you will need to have the file saved on your computer. This could be a document, a photo, a video, or any other type of file.	windows
+4	1	hint	0	0	Open your email application or website and click on "Compose" or the button that allows you to create a new email.	windows
+4	2	hint	0	0	Enter the recipient email address in the "To" field.	windows
+4	3	hint	0	0	Write your message in the large text box provided. You can use the formatting options to change the font and include links.	windows
+4	4	hint	0	0	Look for an icon or button that allows you to attach a file. This is usually represented by a paperclip symbol.	windows
+4	5	hint	0	0	Click on the icon or button to browse for the file you want to attach. Once you have selected the file, click "Open" or a similar button to attach it to your email.	windows
+4	6	hint	0	0	Click "Send" to send your email with the attachment. The recipient will receive the email with the attached file.	windows
+5	1	hint	0	0	Printing is a way to make a physical copy of a document or image from your computer. To print, you will need a printer connected to your computer and paper loaded into the printer.	windows
+5	1	hint	0	0	Open the document or image you want to print.	windows
+5	2	hint	0	0	Click on the "File" menu in the top-left corner of the application.	windows
+5	3	hint	0	0	From the dropdown menu, select "Print" or use the keyboard shortcut Ctrl+P.	windows
+5	4	hint	0	0	A print dialog box will appear. Make sure your printer is selected and adjust any print settings you need, such as the number of copies or the page range to print.	windows
+5	5	hint	0	0	Click "Print" to start the printing process. Your document or image will be sent to the printer and a physical copy will be printed.	windows
+1	1	hint	0	0	Welcome to the "Making Phone Call" module of Mouse Mastery, where you will learn how to use your iOS device to make phone calls. This module is designed for individuals who are new to using an iOS device. By the end of this module, you will be able to open the Phone app, dial a number, make a call, and end a call.	iOS
+1	2	hint	0	0	To get started, locate the Phone app on your iOS device. You can usually find it on your home screen, represented by a green phone icon. Tap the Phone app icon to open it. The main features of the Phone app include the keypad, contacts, and recent calls.	iOS
+1	3	hint	0	0	To dial a number, use the keypad within the Phone app to enter a phone number manually. Alternatively, you can use the address book to select a contact. If you need to add an area code or use a pause to dial extensions, you can do so using the keypad.	iOS
+1	4	hint	0	0	To initiate a call, tap the green phone icon within the Phone app. This will take you to the dialing screen, where you will see the phone number you just entered. Once the call is connected, you will see the call status screen, which shows the duration of the call and other details. During the conversation, you can adjust the volume or mute the call using the on-screen controls.	iOS
+1	5	hint	0	0	To end a call, tap the red phone icon within the active call screen. Alternatively, you can use the face down phone icon to end the call when the phone is placed on a flat surface. If you want to use the speaker or headphones to end the call during the conversation, you can do so using the on-screen controls.	iOS
+1	6	hint	0	0	To recap, in this module you learned how to use your iOS device to make phone calls. You learned how to open the Phone app, dial a number, make a call, and end a call. You also learned some tips and tricks for adjusting the volume, muting the call, and using the speaker or headphones. We encourage you to practice making phone calls on your iOS device to build your confidence and improve your skills.	iOS
+2	1	hint	0	0	Welcome to the "Writing Texts" module of Mouse Mastery, where you will learn how to use your iOS device to send text messages. This module is designed for non-tech-savvy individuals who are new to using an iOS device. By the end of this module, you will be able to open the Messages app, choose a contact or type in a phone number, compose a message, and send the message.	iOS
+2	2	hint	0	0	To get started, locate the Messages app on your iOS device. You can usually find it on your home screen, represented by a green speech bubble icon. Tap the Messages app icon to open it. The main features of the Messages app include the conversations, the compose button, and the keyboard.	iOS
+2	3	hint	0	0	To choose a contact, tap the compose button within the Messages app. This will take you to the New Message screen, where you can see the "To:" field. You can select a contact from the list of suggested contacts, search for a contact using the search bar, or manually type in a phone number in the "To:" field.	iOS
+2	4	hint	0	0	Once you have selected a contact or typed in a phone number, you can compose your message. Tap the text box and use the keyboard to enter your message. You can also use emojis or add attachments, such as photos or videos. If you make a mistake while typing, you can use the backspace key or shake your device to undo the typing.	iOS
+2	5	hint	0	0	To send the message, tap the send button within the text box. This will send the message to the selected contact or phone number. Once the message is sent, you will see a confirmation that it has been delivered.	iOS
+2	6	hint	0	0	To recap, in this module you learned how to use your iOS device to send text messages. You learned how to open the Messages app, choose a contact or type in a phone number, compose a message, and send the message. You also learned some tips and tricks for using the keyboard, emojis, and attachments. We encourage you to practice sending text messages on your iOS device to build your confidence and improve your skills.	iOS
+3	1	hint	0	0	In this module, you will learn how to connect your iOS device to a WiFi network. Connecting to WiFi is essential for browsing the internet, streaming videos, and downloading apps on your device. By the end of this module, you will be able to connect to any available WiFi network on your iOS device.	iOS
+3	2	hint	0	0	Go to your home screen and locate the Settings app, which is represented by a gear icon. Tap on the app to open it.	iOS
+3	3	hint	0	0	Once in the Settings app, scroll down until you see the Wi-Fi option. Tap on the Wi-Fi option to open it.	iOS
+3	4	hint	0	0	Once in the Wi-Fi menu, a list of available networks will appear. Tap on the name of the network you wish to connect to.	iOS
+3	5	hint	0	0	If the network is secured with a password, a prompt will appear asking for the password. Type in the password for the network and tap the "Join" button. Your device will then attempt to connect to the network. Once connected, a checkmark will appear next to the network name.	iOS
+3	6	hint	0	0	To recap, in this module you learned how to connect your iOS device to a WiFi network. You located the Settings app on your home screen, accessed the Wi-Fi tab, selected a network from the list, entered the password (if required), and connected to the network. This allows you to browse the internet, stream videos, and download apps on your device. Practice connecting to different WiFi networks to become more proficient in this process.	iOS
+4	1	hint	0	0	In this module, you will learn how to use the Contacts app on your iOS device to save and manage your contacts. The Contacts app allows you to store information such as phone numbers, email addresses, and physical addresses for the people you know. By the end of this module, you will be able to create new contacts and manage existing ones with ease.	iOS
+4	2	hint	0	0	Go to your home screen and locate the Contacts app, which is represented by a person icon. Tap on the app to open it.	iOS
+4	3	hint	0	0	Once in the Contacts app, tap on the plus sign icon in the top-right corner of the screen. This will open a new contact form.	iOS
+4	4	hint	0	0	In the contact form, you can enter the contact name, phone number, email address, physical address, and more. Tap on each section to fill out the details for the contact.	iOS
+4	5	hint	0	0	Once you have entered all the necessary information, tap on the "Done" button in the top-right corner of the screen. This will save the contact to your device.	iOS
+4	6	hint	0	0	To recap, in this module you learned how to use the Contacts app on your iOS device to save and manage your contacts. You located the Contacts app on your home screen, opened it, and used the add button to create a new contact. Within the contact form, you entered details such as the contact name, phone number, email address, and physical address. Finally, you saved the contact by tapping the "Done" button. By mastering these steps, you can easily create and manage contacts on your iOS device, keeping your important contact information organized and accessible. Practice creating and editing contacts to enhance your proficiency with the Contacts app.	iOS
+1	1	hint	0	0	Welcome to Windows module of Mouse Mastery. In this section, you will learn how to navigate the settings, create and save files, and access the internet.	Windows
+1	1	hint	0	0	Welcome to Windows module of Mouse Mastery. In this section, you will learn how to navigate the settings, create and save files, and access the internet.	\N
 \.
 
 
@@ -367,6 +436,14 @@ ALTER TABLE ONLY public.lessons
 
 ALTER TABLE ONLY public.quiz
     ADD CONSTRAINT quiz_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: steps fk_lesson; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.steps
+    ADD CONSTRAINT fk_lesson FOREIGN KEY (lesson_id) REFERENCES public.lessons(id);
 
 
 --
