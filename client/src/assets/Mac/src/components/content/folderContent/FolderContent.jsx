@@ -174,7 +174,7 @@ const FolderContent = ({ isFolderOpen, closeFolderContent }) => {
               </div>
               <div className={styles.folderWrapper}>
                 <img src="/img/mac/folder.png" alt="folder" />
-                <span>Codersbite</span>
+                <span>Nebula Academy</span>
               </div>
             </div>
             <div className={styles.row}>
@@ -184,7 +184,7 @@ const FolderContent = ({ isFolderOpen, closeFolderContent }) => {
               </div>
               <div className={styles.folderWrapper}>
                 <img src="/img/mac/folder.png" alt="folder" />
-                <span>Weather</span>
+                <span>Bermuda 2023</span>
               </div>
               <div className={styles.folderWrapper}>
                 <img
@@ -192,7 +192,7 @@ const FolderContent = ({ isFolderOpen, closeFolderContent }) => {
                   src="/img/mac/graph.png"
                   alt="folder"
                 />
-                <span>Kessy</span>
+                <span>Registry</span>
               </div>
               <div className={styles.folderWrapper}>
                 <img
@@ -200,7 +200,7 @@ const FolderContent = ({ isFolderOpen, closeFolderContent }) => {
                   src="/img/mac/mov.png"
                   alt="folder"
                 />
-                <span>Hond</span>
+                <span>Footloose</span>
               </div>
               <div className={styles.folderWrapper}>
                 <img
