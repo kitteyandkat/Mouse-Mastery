@@ -37,9 +37,9 @@ export const read = (req, res) => {
     })
 }
 export const readWithJoin = (req, res) => {
-  const {table1, table2} = req.params
-  if (!allowedTables.includes(table1)||!allowedTables.includes(table2)) return res.status(404).send('table not found')
-  const sql = `SELECT * FROM ${table1} JOIN ${table2} ON ${table2}.${table1.slice(0,-1)}_id = ${table1}.id`
+  const { table1, table2 } = req.params
+  if (!allowedTables.includes(table1) || !allowedTables.includes(table2)) return res.status(404).send('table not found')
+  const sql = `SELECT * FROM ${table1} JOIN ${table2} ON ${table2}.${table1.slice(0, -1)}_id = ${table1}.id`
   console.log(sql)
   pool.query(sql)
     .then(results => res.json(results?.rows))
@@ -77,15 +77,13 @@ export const update = (req, res) => {
 }
 
 export const readModulesWithSteps = (req, res) => {
-  
-  const sql = `SELECT * FROM modules i JOIN
-     (SELECT it.module_id AS id, array_agg(it.*) AS steps FROM steps it JOIN modules t ON t.id = it.module_id GROUP BY it.module_id) t
-  USING (id);`
+
+  const sql = ` select m.*, jsonb_agg(row_to_json(s.*)::jsonb  - '{module_id, id, step_order}'::text[]) steps from modules m join steps s on m.id = s.module_id group by m.id;`
   pool.query(sql)
     .then(results => res.json(results?.rows))
     .catch(error => {
       console.error(error)
       res.status(500).send(error)
     })
-  
+
 }
