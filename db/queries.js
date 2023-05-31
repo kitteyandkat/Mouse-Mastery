@@ -1,3 +1,4 @@
+import e from 'express'
 import pool from './db.js'
 const allowedTables = ['steps', 'users', 'modules', 'Persons']
 
@@ -73,4 +74,18 @@ export const update = (req, res) => {
       console.error(error)
       res.status(500).send(error)
     })
+}
+
+export const readModulesWithSteps = (req, res) => {
+  
+  const sql = `SELECT * FROM modules i JOIN
+     (SELECT it.module_id AS id, array_agg(it.*) AS steps FROM steps it JOIN modules t ON t.id = it.module_id GROUP BY it.module_id) t
+  USING (id);`
+  pool.query(sql)
+    .then(results => res.json(results?.rows))
+    .catch(error => {
+      console.error(error)
+      res.status(500).send(error)
+    })
+  
 }
