@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Windows11 from './assets/windows/Windows'
+import Windows11 from './assets/Windows/Windows'
 import PixelClone from './assets/Android/Pixel'
 import Mac from './assets/Mac/src/Mac'
 
