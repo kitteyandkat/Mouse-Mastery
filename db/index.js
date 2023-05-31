@@ -14,7 +14,7 @@ app.post('/api/:table', create)
 app.get('/api/:table', read)
 app.delete('/api/:table/:id',delety)
 app.put('/api/:table/:id', update)
-app.use(express.static('dist'))
+app.use(express.static('../client/dist'))
 // app.get('/api/quiz', async (req, res) => {
 //   try {
 //     const client = await pool.connect();
