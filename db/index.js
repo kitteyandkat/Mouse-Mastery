@@ -4,7 +4,7 @@
 // const queries = require('./queries')
 import express, { application } from 'express'
 import cors from 'cors'
-import {create, read, update, delety} from './queries.js'
+import {create, read, update, delety, readWithJoin} from './queries.js'
 const app = express()
 const port = process.env.port || 3000
 
@@ -12,6 +12,7 @@ app.use(cors())
 app.use(express.json())
 app.post('/api/:table', create)
 app.get('/api/:table', read)
+app.get('/api/:table1/:table2', readWithJoin)
 app.delete('/api/:table/:id',delety)
 app.put('/api/:table/:id', update)
 app.use(express.static('../client/dist')) 
