@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Mac.css";
 import AppleMenu from "./components/content/appleMenu/AppleMenu";
 import FolderContent from "./components/content/folderContent/FolderContent";
@@ -7,6 +7,7 @@ import MenuBar from "./components/menuBar/MenuBar";
 import StatusBar from "./components/statusBar/StatusBar";
 import Modal from "./components/modal/modal";
 import {bounceAnimation} from "./components/menuBar/MenuBar.module.css";
+import { getfromAPI } from "../../../network-request.js";
 
 
 const Mac = () => {
@@ -14,47 +15,29 @@ const Mac = () => {
   const [isFolderOpen, setIsFolderOpen] = useState(false);
   const [hintCount, setHintCount] = useState(0)
   //Fetch list of all modules from backend
-  const [modules, setModules] = useState([{
-    id: 1,
-    device_type: 'mac',
-    tite: 'download folder',
-    steps: [{
-      id: 1,
-      modal_text: 'click on download folder',
-      active_element: '[data-folder-download]'
-    }, {
-      id: 2,
-      modal_text: 'find the lion photo',
-      active_element: '[data-lion-png]'
-    }]
-  },
-  {
-    id: 2,
-    device_type: 'mac',
-    tite: 'menu bar',
-    steps: [{
-      id: 3,
-      modal_text: 'click on apple icon',
-      active_element: '[]'
-    }, {
-      id: 4,
-      modal_text: '',
-      active_element: '[]'
-    }]
-  }])
-  const [currentModule, setCurrentModule] = useState(modules[0])
+  const [modules, setModules] = useState()
+  const [currentModule, setCurrentModule] = useState()
   const [step, setCurrentStep] = useState(0)
   const [modalOpen, setModalOpen] = useState(true)
+  
+  useEffect(()=>{
+    getfromAPI('getAllModules')
+      .then(data => {
+        console.log(data)
+        setModules(data)
+        setCurrentModule(data[0])
+      })
+  },[])
   //create a function that listens to every click request on clone
   const onClick = e => {
     if(modalOpen)return
-    let correctTarget = e.target.closest(currentModule.steps[step]?.active_element)
+    let correctTarget = e.target.closest(currentModule?.steps[step]?.active_element)
     if (!correctTarget) {
       console.log('wrong answer')
       setHintCount(hintCount+1)
       if(hintCount >= 2){
         setModalOpen(true)
-        document.querySelector(currentModule.steps[step]?.active_element)?.classList.add(bounceAnimation)
+        document.querySelector(currentModule?.steps[step]?.active_element)?.classList.add(bounceAnimation)
       }
       return
     }
@@ -68,7 +51,7 @@ const Mac = () => {
     
     const onModalContinue = e => {
       setModalOpen(false)
-      document.querySelector(currentModule.steps[step]?.active_element)?.classList.remove(bounceAnimation)
+      document.querySelector(currentModule?.steps[step]?.active_element)?.classList.remove(bounceAnimation)
   }
 
   //Save to state variable 
@@ -108,7 +91,7 @@ const Mac = () => {
         <AppleMenu isAppleMenuOpen={isAppleMenuOpen} />
       </div>
       <MenuBar />
-      <Modal open={modalOpen} text={currentModule.steps[step]?.modal_text || 'You Did It! 🤪'} onModalContinue={onModalContinue} />
+      <Modal open={modalOpen} text={currentModule?.steps[step]?.modal_text || 'You Did It! 🤪'} onModalContinue={onModalContinue} />
     </div>
   );
 };
