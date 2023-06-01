@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-// import Windows11 from './assets/windows/Windows.jsx'
-// import PixelClone from './assets/Android/Pixel'
+import Windows11 from './assets/Windows/Windows'
+import PixelClone from './assets/Android/Pixel'
+import Mac from './assets/Mac/src/Mac'
 
 function App() {
   const [platform, setPlatform] = useState('windows')
@@ -18,12 +19,11 @@ function App() {
           <button data-active={platform === 'ios'} onClick={updatePlatform} data-platform="ios">iOS</button>
           <button data-active={platform === 'android'} onClick={updatePlatform} data-platform="android">ANDROID</button>
         </div>
-        {/* <div className='tutorial-screen'> */}
-          {/* {platform === 'windows' && <WindowsTutorial/>} */}
-        {/* </div> */}
-        {/* <Windows11/> */}
-        {/* <PixelClone/> */}
-        <img src='/img/android/tree-spirits.jpg'></img>
+        <div className='tutorial-screen'>
+          {platform === 'mac' && <Mac/>}
+          {platform === 'windows' && <Windows11/>}
+          {platform === 'android' && <PixelClone/>}
+        </div>
       </div>
     </div>
 
