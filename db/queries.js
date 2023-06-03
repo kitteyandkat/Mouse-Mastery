@@ -3,7 +3,7 @@ const pool = require('./db')
 const fetchModules = async () => {
   const client = await pool.connect()
   try {
-    const result = await client.query('SELECT * FROM steps'); // replace 'modules' with the actual table name
+    const result = await client.query('SELECT * FROM public.steps')
 
     const modules = result.rows.map((row) => ({
       id: row.id,
@@ -36,7 +36,7 @@ const fetchModules = async () => {
 
     return modules
   } catch (error) {
-    throw new Error('error fetching modules from the database');
+    throw new Error('error fetching modules from the database')
   } finally {
     client.release()
   }
