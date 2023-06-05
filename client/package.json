@@ -12,8 +12,7 @@
   "dependencies": {
     "nodemon": "^2.0.22",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-responsive-modal": "^6.4.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -24,10 +23,5 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.2"
-  },
-  "main": "vite.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }

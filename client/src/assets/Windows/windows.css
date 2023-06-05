@@ -7,10 +7,11 @@ img{
   padding: .5em;
 }
 
-.windows-container {
-  height: 100%;
+body {
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  background-image: url(/img/windows/Wallpaper1.jpg);
+  background-image: url(./Images/Wallpaper1.jpg);
   background-size: cover;
   background-position: center;
   position: relative;

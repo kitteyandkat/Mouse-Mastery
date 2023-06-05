@@ -3,7 +3,7 @@ import './pixel.css'
 
 
 function PixelClone() {
- /* // Declare state variables and their initial values using useState
+  // Declare state variables and their initial values using useState
   const [ispower, setIsPower] = useState(true);
   const [mlTask, setMlTask] = useState(false);
   const [isTask1, setIsTask1] = useState(false);
@@ -19,7 +19,7 @@ function PixelClone() {
   const [blockCount, setBlockCount] = useState(0);
   const [bootDisplay, setBootDisplay] = useState("block");
 
-  const apps = {gallery = {img:''}}
+  const apps = {gallery = {img:}}
   
   const images = [
       // '', 
@@ -256,7 +256,7 @@ function PixelClone() {
         }
       }
       
-*/
+
         return (
           <>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -457,13 +457,13 @@ function PixelClone() {
                         {/* Widget One End*/}
                         {/* Widget Two Start*/}
                         <div className="googleS">
-                          <img className="gs gi1" src="/img/android/widget-icons/gsgi1.png" />
+                          <img className="gs gi1" src="https://i.imgur.com/rKaLCdy.png" />
                           <input
                             type="text"
                             className="gt"
                             placeholder='Say "Hey Google"'
                           />
-                          <img className="gs gi2" src="/img/android/widget-icons/gsgi2.png" />
+                          <img className="gs gi2" src="https://i.imgur.com/ojqFvmu.png" />
                         </div>
                         {/* Widget Two End*/}
                         {/* Menu One Start*/}
@@ -471,7 +471,7 @@ function PixelClone() {
                           <li onclick="app('gl')">
                             <img
                               className="menuIcon"
-                              src="/img/android/menu-icons/gallery.png"
+                              src="https://i.imgur.com/bytdIsW.png"
                               ripple="ripple"
                             />
                             <div className="appTitle">Gallery</div>
@@ -479,7 +479,7 @@ function PixelClone() {
                           <li onclick="app('mf')">
                             <img
                               className="menuIcon"
-                              src="/img/android/menu-icons/files.png"
+                              src="https://i.imgur.com/lT6FyyP.png"
                               ripple="ripple"
                             />
                             <div className="appTitle">My Files</div>
@@ -487,7 +487,7 @@ function PixelClone() {
                           <li onclick="app('ps')">
                             <img
                               className="menuIcon"
-                              src="/img/android/menu-icons/play.png"
+                              src="https://i.imgur.com/iXPpN9l.png"
                               ripple="ripple"
                             />
                             <div className="appTitle">Play Store</div>
@@ -495,7 +495,7 @@ function PixelClone() {
                           <li onclick="appF()">
                             <img
                               className="menuIcon"
-                              src="/img/android/menu-icons/gallery.png"
+                              src="https://i.imgur.com/bytdIsW.png"
                               ripple="ripple"
                             />
                             <div className="appTitle">Google</div>
@@ -509,7 +509,7 @@ function PixelClone() {
                         {/* Menu Two Start*/}
                         <ul className="m1">
                           <li onclick="app('cl')">
-                            <a href="https://google.com">
+                            <a href="https://code.sololearn.com/WF25yEnXKkWC/?ref=app">
                               <img
                                 className="menuIcon"
                                 src="https://i.imgur.com/ckc03G5.png"
@@ -888,8 +888,8 @@ function PixelClone() {
           </>
         )
       }
-    //}
-  //}
+    }
+  }
 
       
 
