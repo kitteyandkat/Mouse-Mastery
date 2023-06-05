@@ -7,6 +7,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "ionicons": "^7.1.2",
     "nodemon": "^2.0.22",
     "pg": "^8.11.0"
   },
@@ -14,6 +15,6 @@
   "scripts": {
     "build": "cd client && npm i && npm run build",
     "start": "node db/index.js",
-    "dev": "concurrently 'cd client && npm run dev' 'nodemon db'"
+    "dev": "concurrently 'nodemon --ignore dist/ --exec \"cd client && npm run build\" ' 'cd client && npm run dev' 'nodemon db'"
   }
 }
