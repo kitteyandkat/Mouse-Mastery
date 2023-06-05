@@ -9,7 +9,8 @@ img{
 
 .windows-container {
   height: 100%;
-  overflow: hidden;
+  width: 100%;
+  overflow: hidden; 
   background-image: url(/img/windows/Wallpaper1.jpg);
   background-size: cover;
   background-position: center;

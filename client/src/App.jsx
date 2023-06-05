@@ -3,6 +3,7 @@ import './App.css'
 import Windows11 from './assets/Windows/Windows'
 import PixelClone from './assets/Android/Pixel'
 import Mac from './assets/Mac/src/Mac'
+import IOSClone from './assets/iOS/ios'
 
 function App() {
   const [platform, setPlatform] = useState('windows')
@@ -19,9 +20,10 @@ function App() {
           <button data-active={platform === 'ios'} onClick={updatePlatform} data-platform="ios">iOS</button>
           <button data-active={platform === 'android'} onClick={updatePlatform} data-platform="android">ANDROID</button>
         </div>
-        <div className='tutorial-screen'>
+        <div className='tutorial-screen'> 
           {platform === 'mac' && <Mac/>}
           {platform === 'windows' && <Windows11/>}
+          {platform === 'ios' && <IOSClone/>}
           {platform === 'android' && <PixelClone/>}
         </div>
       </div>
