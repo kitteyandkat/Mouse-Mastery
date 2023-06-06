@@ -1,5 +1,5 @@
-import { useState } from "react";
-import '../ios/ios.css';
+// import { useState } from "react";
+import './ios.css';
 import { IonIcon } from '@ionic/react'
 import {
   cellularOutline,
