@@ -49,6 +49,34 @@ function iOSClone() {
     document.querySelector('.application-menu').classList.add('active');
   };
 
+  //grab current date
+  const date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth();
+  
+  const currentDayOfWeek = date.getDay();
+  const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+  const currentMonth = months[month];
+  
+ let phoneDate = `${weekdays[currentDayOfWeek]}, ${currentMonth} ${day}`;
+  
+//grab current time 
+let hour = date.getHours();
+const minutes = date.getMinutes();
+
+// Convert to 12-hour format
+hour = hour % 12;
+hour = hour ? hour : 12;
+
+// Add leading zeros
+const currentHour = hour.toString().padStart(2, '0');
+const currentMinutes = minutes.toString().padStart(2, '0');
+
+let time = `${currentHour}:${currentMinutes}`
 
   return (
     <div className="iphone-frame">
@@ -74,8 +102,8 @@ function iOSClone() {
         </div>
         <div className="lock-screen active">
           <div className="time">
-            <h1>9:45</h1>
-            <span>Saturday, October 29</span>
+            <h1>{time}</h1>
+            <span>{phoneDate}</span>
           </div>
           <div className="scr-lock-nav">
             <div className="left">
@@ -113,14 +141,14 @@ function iOSClone() {
 
                 <div className="icon">
                   <button className="bi-envelope-fill mail">
-                  <IonIcon icon={mailOutline} />
+                    <IonIcon icon={mailOutline} />
                   </button>
                   <label>Mail</label>
                 </div>
 
                 <div className="icon">
                   <button className="bi-book-fill ibook">
-                  <IonIcon icon={bookOutline} />
+                    <IonIcon icon={bookOutline} />
                   </button>
                   <label>iBooks</label>
                 </div>
@@ -138,7 +166,7 @@ function iOSClone() {
 
                 <div className="icon">
                   <button className="bi-apple apple-tv">
-                  <IonIcon icon={tvOutline} />
+                    <IonIcon icon={tvOutline} />
                   </button>
                   <label>Apple TV</label>
                 </div>
@@ -163,7 +191,7 @@ function iOSClone() {
 
                 <div className="icon">
                   <button className="bi-house-fill home">
-                  <IonIcon icon={homeOutline} />
+                    <IonIcon icon={homeOutline} />
                   </button>
                   <label>Home</label>
                 </div>
@@ -185,7 +213,7 @@ function iOSClone() {
 
                 <div className="icon">
                   <button className="bi-heart-fill health">
-                  <IonIcon icon={heart} />
+                    <IonIcon icon={heart} />
                   </button>
                   <label>Health</label>
                 </div>
@@ -211,7 +239,7 @@ function iOSClone() {
                 <div className="icon">
                   <button className="messenger-app  ">
                     <span className="bi-messenger"></span>
-                  <img className="icon-svgs" src='/img/iOS/messenger_icon.svg'></img>
+                    <img className="icon-svgs" src='/img/iOS/messenger_icon.svg'></img>
                   </button>
                   <label>Messenger</label>
                 </div>
@@ -230,28 +258,28 @@ function iOSClone() {
 
                 <div className="icon">
                   <button className="green-icon facebook-app bi-facebook">
-                    <IonIcon icon={logoFacebook}/>
+                    <IonIcon icon={logoFacebook} />
                   </button>
                   <label>Facebook</label>
                 </div>
 
                 <div className="icon">
                   <button className="instagram-app bi-instagram">
-                    <IonIcon icon={logoInstagram}/>
+                    <IonIcon icon={logoInstagram} />
                   </button>
                   <label>Instagram</label>
                 </div>
 
                 <div className="icon">
                   <button className="twitter-app  bi-twitter  ">
-                    <IonIcon icon={logoTwitter}/>
+                    <IonIcon icon={logoTwitter} />
                   </button>
                   <label>Twitter</label>
                 </div>
 
                 <div className="icon">
                   <button className="bi-pinterest pinterest-app">
-                    <IonIcon icon={logoPinterest}/>
+                    <IonIcon icon={logoPinterest} />
                   </button>
                   <label>Pinterest</label>
                 </div>
@@ -261,21 +289,21 @@ function iOSClone() {
 
                 <div className="icon">
                   <button className="facetime github-app bi-github">
-                    <IonIcon icon={logoGithub}/>
+                    <IonIcon icon={logoGithub} />
                   </button>
                   <label>Github</label>
                 </div>
 
                 <div className="icon">
                   <button className="youtube-app bi-youtube">
-                    <IonIcon icon={logoYoutube}/>
+                    <IonIcon icon={logoYoutube} />
                   </button>
                   <label>YouTube</label>
                 </div>
 
                 <div className="icon">
                   <button className="whatsapp-app  bi-whatsapp  ">
-                    <IonIcon icon={logoWhatsapp}/>
+                    <IonIcon icon={logoWhatsapp} />
                   </button>
                   <label>WhatsApp</label>
                 </div>
