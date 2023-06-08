@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS modules;
 DROP TABLE IF EXISTS steps;
+DROP TABLE IF EXISTS modules;
 CREATE TABLE users(
   id serial primary key,
   completed_modules int [],
@@ -47,9 +47,9 @@ VALUES
     '[data-folder-download]'
   ),
   (1, 2, 'find the lion photo', '[data-lion-png]'),
-  (1, 3, 'close the window', '[close-window]'),
-  (2, 1, 'click on the apple menu', '[apple-menu]'),
-  (2, 2, 'click on about this mac', '[about-this-mac]'),
-  (2, 2, 'click on about this mac', '[about-this-mac]'),
-  (2, 3, 'click on storage', '[about-storage]');
+  (1, 3, 'close the window', '[data-close-window]'),
+  (2, 1, 'click on the apple menu', '[data-apple-menu]'),
+  (2, 2, 'click on about this mac', '[data-about-this-mac]'),
+  (2, 2, 'click on about this mac', '[data-about-this-mac]'),
+  (2, 3, 'click on storage', '[data-about-storage]');
   

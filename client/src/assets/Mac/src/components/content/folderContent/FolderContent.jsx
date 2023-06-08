@@ -13,7 +13,7 @@ const FolderContent = ({ isFolderOpen, closeFolderContent }) => {
           <div className={styles.left_corner_buttons}>
             <img
               onClick={closeFolderContent}
-              className={styles.left_corner_button_img}
+              className={styles.left_corner_button_img} data-close-window
               src="/img/mac/icons/close.png"
               alt="icns"
             />
