@@ -1,35 +1,36 @@
-import React, { createContext} from 'react'
-import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js'
-import Pool from "../UserPool"
+import React, { createContext } from 'react';
+import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
+import Pool from '../UserPool';
 
-const AccountContext = createContext()
+const AccountContext = createContext();
 
 const Account = () => {
-  const authenticate = async (Username, Password) =>{
-    const user = new CognitoUser({ Username, Pool })
+  const authenticate = async (email, password) => {
+    const user = new CognitoUser({ Username: email, Pool });
 
     const authDetails = new AuthenticationDetails({
       Username: email,
       Password: password,
-    })
+    });
 
     user.authenticateUser(authDetails, {
       onSuccess: (data) => {
-        console.log("onSuccess: ", data)
+        console.log('onSuccess: ', data);
       },
       onFailure: (err) => {
-        console.error("onFailure: ", err)
+        console.error('onFailure: ', err);
       },
       newPasswordRequired: (data) => {
-        console.log("newPasswordRequired: ", data)
+        console.log('newPasswordRequired: ', data);
       },
-    })
-  }
-  return(
-    <AccountContext.Provider>
+    });
+  };
 
+  return (
+    <AccountContext.Provider value={{ authenticate }}>
+      { }
     </AccountContext.Provider>
-  )
-}
+  );
+};
 
-export default Account 
+export default Account;
