@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    /* transition: .8s; */
+}
+
+body {
+    display: flex;
+    transition: .8s;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+     justify-content: center;
+    
+}
+
+/* .application-menu {
+    transform: scale(1.6);
+} */
+
+.iphone-frame {
+    background-color: #fff;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    width: 260px;
+    border: 8px solid #000;
+    border-radius: 40px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 0px #333;
+}
+
+.iphone-frame .norch {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 24px;
+    width: 100px;
+    background-color: #000;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.norch .rounded {
+    position: relative;
+}
+
+.norch::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    height: 4px;
+    width: 30px;
+    border-radius: 10px;
+    border: 0.03em solid rgb(51, 51, 51, 0.479);
+    box-shadow: inset 0px 0px 3px 0px rgb(51, 51, 51, 0.712);
+}
+
+.norch::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.norch .rounded::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    /* background-color: #e2b64f; */
+    top: 0;
+    height: 20px;
+    width: 20px;
+    z-index: 1;
+    border-top-right-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 1px -10px 0px 0px #000;
+}
+
+.norch .rounded::after {
+    content: '';
+    position: absolute;
+    left: 100px;
+    background-color: #e2b64f;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    border-top-left-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: -1px -10px 0px 0px #000;
+}
+
+.app-container .bg-img .bg-frame {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-color: #b7bed0;
+}
+
+.app-container .bg-img .bg-frame::before {
+    content: '';
+    position: absolute;
+    right: -350px;
+    top: -200px;
+    height: 570px;
+    width: 570px;
+    z-index: 1;
+    border-radius: 50%;
+    background-image: linear-gradient(#e2b64f 45%, #ac2e2a 90%);
+    box-shadow: 40px 60px 40px 0px #091933;
+}
+
+.app-container .bg-img .bg-frame:after {
+    content: '';
+    position: absolute;
+    right: -330px;
+    top: 200px;
+    height: 570px;
+    width: 570px;
+    border-radius: 50%;
+    background-image: linear-gradient(#133164, #142e5aa8);
+}
+
+.app-container .bg-img .bg-frame .extra {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    z-index: 1;
+    transform: rotate(20deg) translateX(20px);
+    width: 70px;
+    background-color: #ac2e2a;
+}
+
+.app-container .bg-img .bg-frame .extra::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 55px;
+    height: 20px;
+    width: 20px;
+    border-top-right-radius: 10px;
+    background-color: #091a3502;
+    box-shadow: 0px -10px 0px 0px #ac2e2a;
+}
+
+.extra_2 {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    right: 0;
+    width: 100%;
+    height: 190px;
+    background-image: linear-gradient(to top, #bc517f 10%, transparent);
+}
+
+.nav {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    z-index: 101;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.nav .right {
+    padding-right: 15px;
+}
+
+.nav .right ion-icon {
+    color: #fff;
+    font-size: 14px;
+}
+
+.active {
+    z-index: 199;
+}
+
+.lock-screen {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    transition: .8s;
+    overflow: hidden;
+    left: 0;
+    height: 0%;
+    width: 100%;
+}
+
+.lock-screen.active {
+    height: 100% !important;
+}
+
+.lock-screen .time {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.lock-screen .time h1 {
+    font-size: 50px;
+    height: 60px;
+    color: rgb(255, 255, 255, 0.829);
+}
+
+.lock-screen .time span {
+    font-size: 15px;
+    color: rgb(255, 255, 255, 0.829);
+
+}
+
+.scr-lock-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scr-lock-nav button {
+    margin: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.scr-lock-nav button.r-deg {
+    transform: rotate(-45deg);
+}
+
+.button{
+    position: absolute;
+    bottom: 5px;
+    height: 2px;
+    border-radius: 20px;
+    width: 90px;
+    left: 50%;
+    z-index: 102;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+
+.open-button {
+    position: absolute;
+    bottom: 15px;
+    font-size: 10px;
+    color: #fff;
+    height: 20px;
+    width: fit-content;
+    padding: 2px 5px;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.application-menu {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(5);
+    visibility: hidden;
+}
+
+.application-menu.active {
+    transform: scale(1);
+    visibility: visible;
+}
+
+.bottom-navigation {
+    position: absolute;
+    bottom: 10px;
+    width: 210px;
+    height: fit-content;
+    left: 0;
+    margin: 10px;
+    border-radius: 13px;
+    padding: 6px 6px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+.bottom-navigation .button-app {
+    width: fit-content;
+    line-height: 48px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.slide-1 {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    transition: .7s;
+    left: 0;
+}
+
+#slide_2{
+    transform: translateX(300px) !important;
+}
+
+.slide-1 .icon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.slide-1 .icon button {
+    height: 40px;
+    cursor: pointer;
+    width: 40px;
+    font-size: 25px;
+    transition: .8s;
+    border: 0;
+    line-height: 20px;
+    border-radius: 10px;
+    padding:0;
+}
+.icon-svgs{
+    height: 25px;
+    margin-left: -4px;
+    margin-top: -6px;
+}
+
+.slide-1 .icon label {
+    font-size: 8px;
+    margin-top: 4px;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    line-height: 1em;
+    max-height: 2em;
+    width: 45px;
+    margin-left: -2px;
+}
+
+.applications {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .7s;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+}
+
+.icon-sect {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.indicators {
+    display: flex;
+    position: absolute;
+    bottom: 80px;
+    height: 10px;
+    width: 30px;
+    left: 50%;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(-50%);
+}
+
+.indicators span {
+    height: 6px;
+    width: 6px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.indicators span.active-screen {
+    background-color: #fff;
+}
+
+.applications.active-slide{
+    transition: .7s;
+    transform: translateX(-300px);
+}
+.animate-lock-screen {
+    height: 0;
+    transition: .8s;
+    overflow: hidden;
+}
+.camera {
+    background-color: #b2b1c3;
+}
+.mail {
+    color: #fff;
+    background-image: linear-gradient(#2452ed,#3e93d7);
+}
+.ibook {
+    background-color: #d69c02;
+    color: #fff;
+}
+.itunestore {
+    color: #fff;
+    background-image: linear-gradient(#c000cb, #9d0df9);
+}
+
+.apple-tv {
+    background-color: #111713;
+    color: #fff;
+}
+.home {
+    background-color: white;
+    color: #deb805;
+}
+
+.health {
+    background-color: white;
+    color: #cd0d54;
+}
+.phone-log {
+    background-color: #65ec43 !important;
+    color: #fff;
+}
+.music {
+    background-color: #c93b44;
+    color: #fff;
+}
+.button-app.music {
+    background-color: #c93b44;
+    color: #fff;
+}
+.button-app.message{
+    background-color: #65ec43;
+    color: #fff;
+}
+/* .icon .message {
+    background-color: #adec43 !important;
+    color: #fff;
+} */
+.appstore {
+    background-image: linear-gradient(#4a80d2, #254fb8);
+    color: #fff;
+}
+.facebook-app {
+    background-image: linear-gradient(#4a80d2, #254fb8);
+    color: #fff;
+}
+.xbox-app {
+
+    background-color: green;
+    color: #fff;
+}
+
+.playstation-app {
+    background-image: linear-gradient(blue,#000 180%);
+    color: #fff;
+}
+
+.spotify-app {
+    background-color: rgb(14,13,13);
+    color: rgb(5,175,5);
+}
+
+.messenger-app {
+    background-color: rgb(47,47,253);
+    color: #fff;
+    position: relative;
+}
+.messenger-app::before {
+    content: '5';
+    height: 15px;
+    width: 15px;
+
+    border-radius: 50%;
+    background-color: rgb(226,4,4);
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    line-height: 15px;
+    font-size: 8px;
+}
+.instagram-app {
+    color: #fff;
+    background-image: linear-gradient(to right, #fcb045,#fd1d1d,#833ab4);
+}
+
+.twitter-app {
+    color: #fff;
+    background-image: linear-gradient(#4083e9, #376bee);
+}
+.whatsapp-app {
+    background-color: rgb(4,180,4);
+    color: #fff;
+}
+.pinterest-app {
+ color: #fff;
+ background-color: rgb(253,36,36);
+}
+.github-app {
+    color: #fff;
+    background-color: #333;
+}
+
+.youtube-app {
+    color: #fff;
+    background-color: red;
+}
+.snapchat-app {
+    background-color: rgb(214,214,25);
+    color: #fff;
+}
+
+.green-icon {
+    background-color: #65ec43;
+    color: #fff;
+}
+
+/* .itunes{
+    font-size: 7.5px;
+    margin-left: -5px;
+} */
+
+.command-utility{
+    padding: 0px;
+}
