@@ -9,7 +9,6 @@
 
 body {
   place-items: flex-start !important;
-
 }
 
 .main-container {
@@ -34,6 +33,9 @@ body {
   margin-top: 1em;
   height: 720px;
   background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
