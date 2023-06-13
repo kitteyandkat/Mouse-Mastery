@@ -8,12 +8,12 @@ import {create, read, update, delety} from './queries.js'
 const app = express()
 const port = 3000
 
-app.use(cors())
-app.use(express.json())
-app.post('/api/:table', create)
-app.get('/api/:table', read)
-app.delete('/api/:table/:id',delety)
-app.put('/api/:table/:id', update)
+// app.use(cors())
+// app.use(express.json())
+// app.post('/api/:table', create)
+// app.get('/api/:table', read)
+// app.delete('/api/:table/:id',delety)
+// app.put('/api/:table/:id', update)
 // app.get('/api/quiz', async (req, res) => {
 //   try {
 //     const client = await pool.connect();
