@@ -1,22 +1,16 @@
 import pool from './db.js'
 const allowedTables = ['steps', 'users', 'modules', 'Persons']
 
-<<<<<<< HEAD
 const fetchModules = async () => {
   const client = await pool.connect()
   try {
     const result = await client.query('SELECT * FROM public.steps')
-=======
-//crud
-export const create = (req, res) => {
->>>>>>> a6c7ee1ec4a83c3f02dcecf2635d0929aa88cf85
 
   //make sure user is allowed to call this request
   //make sure the data that is being added is a table that exists
   const table = req.params.table
   if (!allowedTables.includes(table)) return res.status(404).send('table not found')
 
-<<<<<<< HEAD
     // fetch the steps for each module
     for (const module of modules) {
       const stepsResult = await client.query(
@@ -45,21 +39,6 @@ export const create = (req, res) => {
   } finally {
     client.release()
   }
-=======
-  const data = req.body
-  const keys = Object.keys(data)
-  const values = keys.map((x, i) => `$${i + 1}`)
-  const sql = `INSERT into ${table}(${keys.join()}) VALUES (${values.join()})`
-  pool.query(sql, Object.values(data))
-    .then(results => res.status(200).send('data created'))
-    .catch(error => {
-      console.error(error)
-      res.status(500).send(error)
-    })
-  //create dynamic insert string 
-  //map all key values of object into input string
-  // insert the new row into the table
->>>>>>> a6c7ee1ec4a83c3f02dcecf2635d0929aa88cf85
 }
 
 export const read = (req, res) => {
