@@ -1,0 +1,181 @@
+.selection-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-mouse {
+  font-size: 3rem;
+  margin-bottom: 3.75rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  color: #6a0dad;
+}
+
+.logo-mastery {
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(to right, #ffd700, #ffa500, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Added the standard property */
+  animation: shining 1s ease-in-out infinite alternate;
+}
+
+@keyframes shining {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  opacity: 1;
+  position: relative;
+  width: auto;
+}
+
+.button:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.icon-text {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-family: 'Nunito Sans', 'Roboto Slab', sans-serif;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.selected-button {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  cursor: default;
+  width: 0;
+}
+
+.icon {
+  font-size: 4rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.button:hover .icon {
+  color: rgb(119, 119, 116);
+}
+
+.start-button {
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.start-button:hover {
+  background-color: #4d0282;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  opacity: 1;
+  position: relative;
+  width: auto;
+}
+
+.button:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.icon-text {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-family: 'Nunito Sans', 'Roboto Slab', sans-serif;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.selected-button {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  cursor: default;
+  width: 0;
+}
+
+.icon {
+  font-size: 4rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.button:hover .icon {
+  color: rgb(119, 119, 116);
+}
+
+.start-button {
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.start-button:hover {
+  background-color: #4d0282;
+}
