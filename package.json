@@ -13,7 +13,7 @@
   "type": "module",
   "scripts": {
     "build": "cd client && npm i && npm run build",
-    "start": "cd db && node index.js",
-    "dev": "concurrently 'cd client && npm run dev' 'cd db && nodemon'"
+    "start": "node db/index.js",
+    "dev": "concurrently 'cd client && npm run dev' 'nodemon db'"
   }
 }
