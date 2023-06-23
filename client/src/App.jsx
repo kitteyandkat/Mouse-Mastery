@@ -3,7 +3,10 @@ import './App.css'
 import Windows11 from './assets/Windows/Windows'
 import PixelClone from './assets/Android/Pixel'
 import Mac from './assets/Mac/src/Mac'
+import WindowsClone from './assets/Windows/src/App'
+
 import IOSClone from './assets/iOS/ios'
+
 
 function App() {
   const [platform, setPlatform] = useState('windows')
@@ -22,7 +25,7 @@ function App() {
         </div>
         <div className='tutorial-screen'> 
           {platform === 'mac' && <Mac/>}
-          {platform === 'windows' && <Windows11/>}
+          {platform === 'windows' && <WindowsClone/>}
           {platform === 'ios' && <IOSClone/>}
           {platform === 'android' && <PixelClone/>}
         </div>

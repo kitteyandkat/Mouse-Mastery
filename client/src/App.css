@@ -24,6 +24,7 @@ body {
 }
 
 .tutorial-container {
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 1080px;
@@ -31,6 +32,7 @@ body {
 }
 
 .tutorial-screen {
+  position: relative;
   margin-top: 1em;
   height: 720px;
   background-color: gray;
