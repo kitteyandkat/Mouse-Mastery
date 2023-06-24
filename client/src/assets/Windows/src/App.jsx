@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { useDispatch, useSelector } from "react-redux";
 import "./i18nextConf";
 import "./index.css";
-
+import Modal from "../../Mac/src/components/modal/modal";
+import { getfromAPI } from "../../../network-request";
 import ActMenu from "./components/menu";
 import {
   BandPane,
@@ -71,9 +72,48 @@ function Windows11() {
   const apps = useSelector((state) => state.apps);
   const wall = useSelector((state) => state.wallpaper);
   const dispatch = useDispatch();
+   //Fetch list of all modules from backend
+   const [modules, setModules] = useState()
+   const [currentModule, setCurrentModule] = useState()
+   const [step, setCurrentStep] = useState(0)
+   const [modalOpen, setModalOpen] = useState(true)
+   
+   useEffect(()=>{
+     getfromAPI('getAllModules')
+       .then(data => {
+         console.log(data)
+         setModules(data)
+         setCurrentModule(data[0])
+       })
+   },[])
+   //create a function that listens to every click request on clone
+   const onClick = e => {
+     if(modalOpen)return
+     let correctTarget = e.target.closest(currentModule?.steps[step]?.active_element)
+     if (!correctTarget) {
+       console.log('wrong answer')
+       setHintCount(hintCount+1)
+       if(hintCount >= 2){
+         setModalOpen(true)
+         document.querySelector(currentModule?.steps[step]?.active_element)?.classList.add(bounceAnimation)
+       }
+       return
+     }
+     console.log('correct answer')
+     setModalOpen(true)
+     setCurrentStep(step + 1)
+     // if (!active_element){
+       
+       // }
+     }
+     
+     const onModalContinue = e => {
+       setModalOpen(false)
+       document.querySelector(currentModule?.steps[step]?.active_element)?.classList.remove(bounceAnimation)
+   }
 
   const afterMath = (event) => {
-    var ess = [
+    let ess = [
       ["START", "STARTHID"],
       ["BAND", "BANDHIDE"],
       ["PANE", "PANEHIDE"],
@@ -82,12 +122,12 @@ function Windows11() {
       ["MENU", "MENUHIDE"],
     ];
 
-    var actionType = "";
+    let actionType = "";
     try {
       actionType = event.target.dataset.action || "";
     } catch (err) {}
 
-    var actionType0 = getComputedStyle(event.target).getPropertyValue(
+    let actionType0 = getComputedStyle(event.target).getPropertyValue(
       "--prefix"
     );
 
@@ -104,7 +144,7 @@ function Windows11() {
     afterMath(e);
     e.preventDefault();
     // dispatch({ type: 'GARBAGE'});
-    var data = {
+    let data = {
       top: e.clientY,
       left: e.clientX,
     };
@@ -137,7 +177,7 @@ function Windows11() {
   });
 
   return (
-    <div className="App">
+    <div className="App" onClick={onClick}>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         {!wall.booted ? <BootScreen dir={wall.dir} /> : null}
         {wall.locked ? <LockScreen dir={wall.dir} /> : null}
@@ -146,7 +186,7 @@ function Windows11() {
           <div className="desktop" data-menu="desk">
             <DesktopApp />
             {Object.keys(Applications).map((key, idx) => {
-              var WinApp = Applications[key];
+              let WinApp = Applications[key];
               return <WinApp key={idx} />;
             })}
             {Object.keys(apps)
@@ -154,7 +194,7 @@ function Windows11() {
               .map((key) => apps[key])
               .map((app, i) => {
                 if (app.pwa) {
-                  var WinApp = Drafts[app.data.type];
+                  let WinApp = Drafts[app.data.type];
                   return <WinApp key={i} icon={app.icon} {...app.data} />;
                 }
               })}
@@ -163,6 +203,7 @@ function Windows11() {
             <SidePane />
             <WidPane />
             <CalnWid />
+              <Modal open={modalOpen} text={currentModule?.steps[step]?.modal_text || 'You Did It! 🤪'} onModalContinue={onModalContinue} />
           </div>
           <Taskbar />
           <ActMenu />

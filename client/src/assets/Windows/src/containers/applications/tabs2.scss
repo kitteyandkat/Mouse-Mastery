@@ -1,15 +1,6 @@
 .aboutApp {
-  --bg1: #f3f3f3;
-  --bg2: #fff;
+  display: none;
 
-  top: calc(50% - 210px);
-  left: calc(50% - 14rem);
-  width: 28rem;
-  height: auto;
-  color: var(--dark-txt);
-  background: var(--bg1);
-  overflow: hidden;
-  font-size: 14px;
 
   a {
     color: var(--clrPrm);
