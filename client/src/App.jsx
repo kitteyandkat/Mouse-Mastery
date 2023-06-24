@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 4000);
   }, []);
 
   const hideSelectionPage =(selectedPlatform) =>{
