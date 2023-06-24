@@ -1,0 +1,46 @@
+.sign-in-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.sign-in-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sign-in-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-form label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.sign-in-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px; /* Increased margin-bottom */
+}
+
+.sign-in-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sign-in-form button:hover {
+  background-color: #0069d9;
+}
+
+.sign-in-form button:active {
+  background-color: #0056b3;
+}
+
