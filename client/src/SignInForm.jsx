@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SignInForm.css';
 
-const SignInForm = () => {
+const SignInForm = ({hideSelectionPage, selectedIcon}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
@@ -28,6 +28,7 @@ const SignInForm = () => {
     if (isFormValid) {
       // Redirect to main content or perform other actions
       console.log('Redirecting to main content...');
+      hideSelectionPage(selectedIcon)
     }
   };
 

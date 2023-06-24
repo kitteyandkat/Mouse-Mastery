@@ -30,10 +30,10 @@ const SelectionPage = () => {
       <div className={`button-container ${selectedIcon ? "collapsed" : ""}`}>
         {!selectedIcon ? (
           <>
-            <button className="button-os" onClick={() => handleIconClick("android")}>
+            {/* <button className="button-os" onClick={() => handleIconClick("android")}>
               <FaAndroid className="icon" size={64} />
               <span className="icon-text">Android</span>
-            </button>
+            </button> */}
             <button className="button-os" onClick={() => handleIconClick("windows")}>
               <FaWindows className="icon" size={64} />
               <span className="icon-text">Windows</span>

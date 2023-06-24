@@ -4,7 +4,7 @@ import { FaAndroid, FaWindows } from "react-icons/fa";
 import { SiIos, SiMacos } from "react-icons/si";
 import SignInForm from "./SignInForm";
 
-const SelectionPage = () => {
+const SelectionPage = ({hideSelectionPage}) => {
   const [selectedIcon, setSelectedIcon] = useState("");
   const [showStartButton, setShowStartButton] = useState(false);
 
@@ -26,10 +26,10 @@ const SelectionPage = () => {
       <div className={`button-container ${selectedIcon ? "collapsed" : ""}`}>
         {!selectedIcon ? (
           <>
-            <button className="button-os" onClick={() => handleIconClick("android")}>
+            {/* <button className="button-os" onClick={() => handleIconClick("android")}>
               <FaAndroid className="icon" size={64} />
               <span className="icon-text">Android</span>
-            </button>
+            </button> */}
             <button className="button-os" onClick={() => handleIconClick("windows")}>
               <FaWindows className="icon" size={64} />
               <span className="icon-text">Windows</span>
@@ -38,7 +38,7 @@ const SelectionPage = () => {
               <SiIos className="icon" size={64} />
               <span className="icon-text">iPhone</span>
             </button>
-            <button className="button-os" onClick={() => handleIconClick("macos")}>
+            <button className="button-os" onClick={() => handleIconClick("mac")}>
               <SiMacos className="icon" size={64} />
               <span className="icon-text">macOS</span>
             </button>
@@ -63,7 +63,7 @@ const SelectionPage = () => {
                 <span className="icon-text">iPhone</span>
               </>
             )}
-            {selectedIcon === "macos" && (
+            {selectedIcon === "mac" && (
               <>
                 <SiMacos className="icon" size={64} />
                 <span className="icon-text">macOS</span>
@@ -72,7 +72,7 @@ const SelectionPage = () => {
           </button>
         )}
       </div>
-      {showStartButton && <SignInForm />}
+      {showStartButton && <SignInForm hideSelectionPage={hideSelectionPage} selectedIcon={selectedIcon}/>}
     </div>
   );
 };
