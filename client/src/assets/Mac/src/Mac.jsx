@@ -52,6 +52,15 @@ const Mac = () => {
     const onModalContinue = e => {
       setModalOpen(false)
       document.querySelector(currentModule?.steps[step]?.active_element)?.classList.remove(bounceAnimation)
+      console.log(currentModule?.steps.length, step)
+      if(currentModule?.steps.length<=step){
+        setCurrentStep(0)
+        if(currentModule===modules[0]){
+          console.log('moving to next step')
+          setCurrentModule(modules[1])
+          setTimeout(()=> setModalOpen(true),500)
+        }
+      }
   }
 
   //Save to state variable 

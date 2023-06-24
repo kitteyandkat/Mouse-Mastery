@@ -3,8 +3,8 @@ import { ErrorBoundary } from "react-error-boundary";
 import { useDispatch, useSelector } from "react-redux";
 import "./i18nextConf";
 import "./index.css";
-import Modal from "../../Mac/src/components/modal/modal";
-import { getfromAPI } from "../../../network-request";
+// import Modal from "../../Mac/src/components/modal/modal";
+// import { getfromAPI } from "../../../network-request";
 import ActMenu from "./components/menu";
 import {
   BandPane,
@@ -72,45 +72,45 @@ function Windows11() {
   const apps = useSelector((state) => state.apps);
   const wall = useSelector((state) => state.wallpaper);
   const dispatch = useDispatch();
-   //Fetch list of all modules from backend
-   const [modules, setModules] = useState()
-   const [currentModule, setCurrentModule] = useState()
-   const [step, setCurrentStep] = useState(0)
-   const [modalOpen, setModalOpen] = useState(true)
+  //  //Fetch list of all modules from backend
+  //  const [modules, setModules] = useState()
+  //  const [currentModule, setCurrentModule] = useState()
+  //  const [step, setCurrentStep] = useState(0)
+  //  const [modalOpen, setModalOpen] = useState(true)
    
-   useEffect(()=>{
-     getfromAPI('getAllModules')
-       .then(data => {
-         console.log(data)
-         setModules(data)
-         setCurrentModule(data[0])
-       })
-   },[])
-   //create a function that listens to every click request on clone
-   const onClick = e => {
-     if(modalOpen)return
-     let correctTarget = e.target.closest(currentModule?.steps[step]?.active_element)
-     if (!correctTarget) {
-       console.log('wrong answer')
-       setHintCount(hintCount+1)
-       if(hintCount >= 2){
-         setModalOpen(true)
-         document.querySelector(currentModule?.steps[step]?.active_element)?.classList.add(bounceAnimation)
-       }
-       return
-     }
-     console.log('correct answer')
-     setModalOpen(true)
-     setCurrentStep(step + 1)
-     // if (!active_element){
+  //  useEffect(()=>{
+  //    getfromAPI('getAllModules')
+  //      .then(data => {
+  //        console.log(data)
+  //        setModules(data)
+  //        setCurrentModule(data[0])
+  //      })
+  //  },[])
+  //  //create a function that listens to every click request on clone
+  //  const onClick = e => {
+  //    if(modalOpen)return
+  //    let correctTarget = e.target.closest(currentModule?.steps[step]?.active_element)
+  //    if (!correctTarget) {
+  //      console.log('wrong answer')
+  //      setHintCount(hintCount+1)
+  //      if(hintCount >= 2){
+  //        setModalOpen(true)
+  //        document.querySelector(currentModule?.steps[step]?.active_element)?.classList.add(bounceAnimation)
+  //      }
+  //      return
+  //    }
+  //    console.log('correct answer')
+  //    setModalOpen(true)
+  //    setCurrentStep(step + 1)
+  //    // if (!active_element){
        
-       // }
-     }
+  //      // }
+  //    }
      
-     const onModalContinue = e => {
-       setModalOpen(false)
-       document.querySelector(currentModule?.steps[step]?.active_element)?.classList.remove(bounceAnimation)
-   }
+  //    const onModalContinue = e => {
+  //      setModalOpen(false)
+  //      document.querySelector(currentModule?.steps[step]?.active_element)?.classList.remove(bounceAnimation)
+  //  }
 
   const afterMath = (event) => {
     let ess = [
@@ -177,7 +177,7 @@ function Windows11() {
   });
 
   return (
-    <div className="App" onClick={onClick}>
+    <div className="App">
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         {!wall.booted ? <BootScreen dir={wall.dir} /> : null}
         {wall.locked ? <LockScreen dir={wall.dir} /> : null}
@@ -203,7 +203,7 @@ function Windows11() {
             <SidePane />
             <WidPane />
             <CalnWid />
-              <Modal open={modalOpen} text={currentModule?.steps[step]?.modal_text || 'You Did It! 🤪'} onModalContinue={onModalContinue} />
+              {/* <Modal open={modalOpen} text={currentModule?.steps[step]?.modal_text || 'You Did It! 🤪'} onModalContinue={onModalContinue} /> */}
           </div>
           <Taskbar />
           <ActMenu />

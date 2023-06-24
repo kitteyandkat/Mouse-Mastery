@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "./SelectionPage.css";
 import { FaAndroid, FaWindows } from "react-icons/fa";
 import { SiIos, SiMacos } from "react-icons/si";
-import { useHistory } from "react-router-dom";
+import SignInForm from "./SignInForm";
 
-const SelectionPage = () => {
+const SelectionPage = ({hideSelectionPage}) => {
   const [selectedIcon, setSelectedIcon] = useState("");
   const [showStartButton, setShowStartButton] = useState(false);
-  const history = useHistory();
 
   const handleIconClick = (icon) => {
     setSelectedIcon(icon);
@@ -16,10 +15,7 @@ const SelectionPage = () => {
 
   const handleStartButtonClick = () => {
     console.log("Start button clicked for", selectedIcon);
-    // Perform sign-in logic
-    // If sign-in is successful, navigate to the main content
-    history.push("/main");
-  };
+};
 
   return (
     <div className="selection-page">
@@ -42,7 +38,7 @@ const SelectionPage = () => {
               <SiIos className="icon" size={64} />
               <span className="icon-text">iPhone</span>
             </button>
-            <button className="button-os" onClick={() => handleIconClick("macos")}>
+            <button className="button-os" onClick={() => handleIconClick("mac")}>
               <SiMacos className="icon" size={64} />
               <span className="icon-text">macOS</span>
             </button>
@@ -67,7 +63,7 @@ const SelectionPage = () => {
                 <span className="icon-text">iPhone</span>
               </>
             )}
-            {selectedIcon === "macos" && (
+            {selectedIcon === "mac" && (
               <>
                 <SiMacos className="icon" size={64} />
                 <span className="icon-text">macOS</span>
@@ -76,11 +72,7 @@ const SelectionPage = () => {
           </button>
         )}
       </div>
-      {showStartButton && (
-        <>
-          <SignInForm />
-        </>
-      )}
+      {showStartButton && <SignInForm hideSelectionPage={hideSelectionPage} selectedIcon={selectedIcon}/>}
     </div>
   );
 };
